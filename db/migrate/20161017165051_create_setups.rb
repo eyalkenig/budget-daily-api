@@ -3,7 +3,7 @@ class CreateSetups < ActiveRecord::Migration[5.0]
     create_table :setups do |t|
       t.string :name
       t.text :description
-      t.bool :active
+      t.boolean :active
       t.belongs_to :user, foreign_key: true
 
       t.timestamps
