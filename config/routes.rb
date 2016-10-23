@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  post 'authenticate', to: 'authentication#authenticate'
+
   resources :expenses
   resources :incomes
   resources :setups
   resources :items
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post 'authenticate', to: 'authentication#authenticate'
+
+  get '/summary/daily' => 'summary#daily_report'
+
 end

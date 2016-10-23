@@ -4,7 +4,7 @@ class CreateIncomes < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       t.integer :amount
-      t.bool :active
+      t.boolean :active
       t.belongs_to :setup, foreign_key: true
 
       t.timestamps
